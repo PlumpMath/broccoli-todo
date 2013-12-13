@@ -6,7 +6,6 @@ module.exports = function (broccoli) {
   var packageReader = new broccoli.readers.PackageReader(packages)
 
   var compilerCollection = new broccoli.transformers.compilers.CompilerCollection({
-    staticFiles: ['appkit/index.html'],
     compilers: [
       new broccoli.transformers.compilers.ES6ConcatenatorCompiler({
         loaderFile: 'loader.js', // make this a default
@@ -24,7 +23,12 @@ module.exports = function (broccoli) {
           'ember-resolver.js'
         ],
         outputFile: '/assets/app.js'
-      })
+      }),
+      new broccoli.transformers.compilers.StaticFileCompiler({
+        srcDir: '/appkit-public',
+        destDir: '/'
+      }),
+
     ]
   })
   var builder = new broccoli.Builder({

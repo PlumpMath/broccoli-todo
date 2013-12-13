@@ -9,5 +9,11 @@ module.exports = function (factory, broccoli) {
       compileFunction: 'Ember.Handlebars.compile'
     })
   ]))
-  return [pkg]
+
+  var publicPkg = factory.makePackage()
+    .map({
+      'public': '/appkit-public'
+    })
+
+  return [pkg, publicPkg]
 }
