@@ -8,7 +8,7 @@
 # dependencies
 /node_modules
 /vendor/*
-!/vendor/loader.js
+!/vendor/loader/loader.js
 
 # misc
 /.sass-cache
