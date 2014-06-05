@@ -10,7 +10,6 @@
     "ic-ajax": "~0.1"
   },
   "resolutions": {
-    "ember": "~1.2.0",
-    "handlebars": "~1.1.2"
+    "ember": "~1.2.0"
   }
 }

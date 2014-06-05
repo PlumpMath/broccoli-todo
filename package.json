@@ -22,7 +22,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "broccoli": "0.0.4",
+    "broccoli": "*",
     "broccoli-cli": "*"
   }
 }
